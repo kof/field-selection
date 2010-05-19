@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Field selection demo</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>
+    <script type="text/javascript" src="../src/jquery.fieldSelection.js"></script>
+   
+</head>
+<body>
+
+<button onclick="get()">get selection</button>
+<button onclick="$elem.fieldSelection('<REPLACED>')">replace selection</button>
+
+
+<br />
+<textarea id="textarea" style="width: 300px; height: 200px;">
+    E nex incontinencia, exigo era Palus sum iam magnificabiliter loci, sal incurro, dux necessarius Negotium os orbis, era alatus ineo, vel loquor, hic sed, Viva tam. Ico explorator mos, Expello hinc hac talio, mensa plures utor to tutamen eia Extundo sentus ita Novus, his Securus, tam nam Crepundia, Torreo fas Prolixus, nec flecto alibi peragro. Nam Deficio contradictio ops Posco laeto aeger Freno .    
+</textarea>
+
+<br /><br />
+<input type="text" id="text" />
+
+<script>
+                            
+  $('input, textarea').focus(function(){
+      $elem = $(this);
+  });
+  
+  function get() {
+      alert($elem.fieldSelection().text);
+      window.console && console.log($elem.fieldSelection());
+  }
+  
+</script> 
+</body>
+</html>
