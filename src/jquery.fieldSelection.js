@@ -5,7 +5,7 @@
  * @author Oleg Slobodskoi (jsui.de) 
  */
 
-(function($, document) {
+(function($) {
     
 /**
  * Extend jQuery's prototype
