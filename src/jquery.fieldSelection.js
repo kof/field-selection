@@ -34,8 +34,8 @@ function get( elem ) {
         data.length = data.end - data.start;
         data.text = elem.value.substr(data.start, data.length);
     // IE    
-    } else if ( document.selection ) {
-        var r = document.selection.createRange();
+    } else if ( elem.ownerDocument.selection ) {
+        var r = elem.ownerDocument.selection.createRange();
         if ( !r ) return data;
         var tr = elem.createTextRange(),
             ctr = tr.duplicate();
@@ -66,8 +66,8 @@ function replace( elem, text ) {
         elem.selectionStart = pos;
         elem.selectionEnd = pos; 
     // IE    
-    } else if ( document.selection ) {
-        var range = document.selection.createRange();
+    } else if ( elem.ownerDocument.selection ) {
+        var range = elem.ownerDocument.selection.createRange();
         range.text = text;
         range.move('character', 0);   
         range.select();    
@@ -79,5 +79,5 @@ function replace( elem, text ) {
     }
 }
 
-})(jQuery, window.document);
+})(jQuery);
 
