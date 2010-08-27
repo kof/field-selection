@@ -60,11 +60,18 @@ function replace( elem, text ) {
     // dom 3
     if ( elem.selectionStart >= 0 ) {
         var start = elem.selectionStart,
-            end = elem.selectionEnd; 
+            end = elem.selectionEnd,
+            pos,
+            scrollTop = elem.scrollTop, 
+            scrollLeft = elem.scrollLeft; 
+
         elem.value = elem.value.substr(0, start) + text + elem.value.substr(end);
-        var pos = start + text.length;
+        pos = start + text.length;
         elem.selectionStart = pos;
-        elem.selectionEnd = pos; 
+        elem.selectionEnd = pos;
+        // settings selection selection resets scroll position in FF, so restore it
+        elem.scrollTop = scrollTop; 
+        elem.scrollLeft = scrollLeft; 
     // IE    
     } else if ( elem.ownerDocument.selection ) {
         var range = elem.ownerDocument.selection.createRange();
@@ -80,4 +87,3 @@ function replace( elem, text ) {
 }
 
 })(jQuery);
-
