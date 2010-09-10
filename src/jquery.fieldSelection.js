@@ -1,5 +1,7 @@
 /**
- * jQuery plugin for selection and replacement of text in input and textarea
+ * jQuery plugin for getting selection or replace a text in input field and textarea
+ * 
+ * Dual licensed under the MIT or GPL Version 2 licenses.
  * 
  * @version 0.1
  * @author Oleg Slobodskoi (jsui.de) 
