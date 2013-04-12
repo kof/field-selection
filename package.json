@@ -13,9 +13,6 @@
     },
     "keywords": ["textarea", "input", "field", "selection", "replace", "text"],
     "engines": {},
-    "dependencies": {
-        "jquery": "*"
-    },
     "devDependencies": {},
     "scripts": {},
     "licenses": [
