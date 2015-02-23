@@ -2,7 +2,7 @@
     "name": "field-selection",
     "title": "Get text selection or replace selected text in input field or textarea.",
     "description": "Get text selection or replace selected text in input field or textarea.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "main": "lib/field-selection.js",
     "author": {
         "name": "Oleg Slobodskoi",
